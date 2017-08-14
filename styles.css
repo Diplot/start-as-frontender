@@ -4,7 +4,9 @@ body {
   font-size: 16px;
   background-color: #008;
 }
+
 .header {
+    display: flex;
     width: 600px;
     height: 120px;
     background-color: #080;
@@ -12,6 +14,52 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.header a{
+    text-decoration: none;
+    color: #333;
+}
+.header .logo img{
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #000;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 80px; 
+}
+.header .brand {
+    margin-left: 2px;
+    margin-top: 20px;
+    height: 80px;
+    border: 1px solid #000;
+    background-color: #fff;
+    line-height: 90px;
+    font-size: 58px;
+    font-weight: 900; 
+}
+
+.buttons a{
+    margin-left: 2px; 
+    background-color: #fff;    
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    align-items: center;
+    width: 136px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 22px;
+    font-weight: 900;
+}
+.login a{
+    color: #666;
+    padding-left: auto;
+    border-radius: 0 20px 0 0 ;
+    margin-top: 20px;    
+}
+.register a{
+    border-radius: 0 0 20px  0;
+    margin-top: 2px;        
+}
+
 .main {
     width: 600px;
     display: flex;
@@ -23,10 +71,11 @@ body {
 }
 
 .main .sidebar {
-    border: 1px solid #000;
+    
     height: 400px;
-    flex-grow: 1;
+    
     padding: 10px;
+    width: 100px;
 }
 
 .main .sidebar .sidebar__item {
@@ -43,5 +92,45 @@ body {
     color: #444;
 }
 .main .content {
-    flex-grow: 2
+    display: flex;
+    border-left:  1px solid #000;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.main .content .content__item{
+    
+    margin-top: 10px;
+    margin-left: 10px;
+   border: 1px solid #000;
+    display: flex;
+    width: 200px;
+    height: 100px
+}
+.content__item--img{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 120px;
+}
+.content__item--price{
+    margin-top: 5px;
+    margin-right: 3px;
+    text-align: center;
+    font-size: 16px;
+    color: #006;
+    font-weight: 900;
+}
+.content__item--about{
+    margin-right: 3px;
+    font-size: 8px;
+}
+.content__item--buy{
+    margin-right: 3px;
+  margin-top: 5px;
+  text-align: center;  
+}
+.content__item--buy a{
+    text-decoration: none;
+    color: #d00;
+    font-weight: 900;
+    
 }
