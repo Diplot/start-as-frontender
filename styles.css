@@ -3,24 +3,44 @@ body {
   margin: 0;
   font-size: 16px;
   color: #000;
-  background-color: #ccf;
+  background-color: #ccc
 }
-
+.example h3{
+    font-family: 'Droid Serif', cursive;
+    text-align: center;
+    font-weight: 900;
+        
+}
+.example p{
+    text-align: center;
+    font-weight: 500;
+        
+}
 table, td, th {
   padding: 0;
   margin: 0;
   font-size: 14px;
 }
-table {
+th{
+    font-size: 16px;
+}
+select.form-control{
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+}
+table {  
   width: 100%;
 }
-
+table .table-info{
+    text-align: center;
+}
 .main {
   margin: 10px auto;
   width: 800px;
-  background-color: #fff;
+  
   padding: 10px;
-  border-radius: 10px;
+  
 }
 
 .example {
@@ -28,6 +48,9 @@ table {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px dotted #ccc;
+  border-radius: 40px;
+  background-color: #F0F8FF;
+  box-shadow:10px 10px 5px grey ;
 }
 
 .example h3 {
@@ -77,3 +100,7 @@ table {
   background-color: #00c;
 }
 
+img {
+width:16px;
+height:16px;
+}

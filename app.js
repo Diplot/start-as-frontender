@@ -35,11 +35,14 @@ class Catalog {
   fillTable () {
     let streets = this.data[this.current].objects, result = '';
     streets.map( item => {
-      let names = `<tr><td>${item.oldName}</td><td>${item.newName}</td>`,
+      let names = `<tr><td class="table-danger">${item.oldName}</td><td class=" table-success">${item.newName}</td>`,
           link = !!item.link 
-            ? `<td><a href="${item.link.href}">link</a></td>` 
-            : `<td></td>`;
-      result += names + link + `<td></td></tr>`;
+            ? `<td class="table-primary"><a href="${item.link.href}">wikipedia</a></td>` 
+            : `<td class="table-primary">&nbsp;</td>`,
+          history =  item.restored
+            ? `<td class="table-info"><img src="svg/si-glyph-castle.svg"/></td>`
+            : `<td class="table-info"></td>`;
+      result += names + link + history +`</tr>`;
     });
     $('#table-data').html(result);
   }
