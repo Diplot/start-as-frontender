@@ -20,9 +20,23 @@ class Catalog {
   }
   
   initMap () {
+        var uluru = new google.maps.LatLng(48.4650377 ,35.0531267);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+          
+        });
 
-  }
-  
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });   
+    
+        let autocomplete = new google.maps.places.Autocomplete(document.getElementById('map-autocomplete'));
+         autocomplete.bindTo('bounds', map);
+         
+        }
+        
   startCountdown () {
     let counter = $("#getting-started");
     counter.countdown("2018/01/01", (e) => {
